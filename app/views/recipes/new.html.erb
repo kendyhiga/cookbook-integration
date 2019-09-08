@@ -1,0 +1,39 @@
+<h1>Creates new recipe</h1>
+
+<%= form_for @recipe do |f| %>
+  <table>
+    <tr>
+      <td><%= f.label :title, (t 'title') %></td>
+      <td><%= f.text_field :title %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :recipe_type_id, (t 'recipe_type') %></td>
+      <td><%= f.number_field :recipe_type_id %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :cuisine_id, (t 'cuisine') %></td>
+      <td><%= f.number_field :cuisine_id %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :difficulty, (t 'difficulty') %></td>
+      <td><%= f.text_field :difficulty %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :cook_time, (t 'cook_time') %></td>
+      <td><%= f.number_field :cook_time %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :ingredients, (t 'ingredients') %></td>
+      <td><%= f.text_area :ingredients %></td>
+    </tr>
+    <tr>
+      <td><%= f.label :cook_method, (t 'cook_method') %></td>
+      <td><%= f.text_area :cook_method %></td>
+    </tr>
+    <tr>
+      <td><%= f.submit ('submit') %></td>
+    </tr>
+  </table>
+<% end %>
+
+<%= link_to (t 'back'), root_path %>
