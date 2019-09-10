@@ -10,10 +10,10 @@ class RecipesController < ApplicationController
                          params[:recipe]['difficulty'],
                          params[:recipe]['cook_time'],
                          params[:recipe]['ingredients'],
-                         params[:recipe]['cook_method'])
+                         params[:recipe]['cook_method'],
+                         params[:recipe]['user_id'])
     uri = URI('http://localhost:3000/api/v1/recipes')
-    json = { recipe: @recipe.instance_values }
-    byebug
+    json = { 'recipe' => @recipe.instance_values }
     # json = { recipe: @recipe.instance_values.symbolize_keys }
     @response = Net::HTTP.post_form(uri, json)
     redirect_to new_recipe_path
@@ -24,9 +24,9 @@ class RecipesController < ApplicationController
     @example = Net::HTTP.get(uri)
   end
 
-  private
+  # private
 
-  def recipe_params
+  # def recipe_params
      
-  end
+  # end
 end

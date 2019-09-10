@@ -33,6 +33,10 @@
       <td><%= f.text_area :cook_method %></td>
     </tr>
     <tr>
+      <td><%= f.label :user_id, (t 'user_id') %></td>
+      <td><%= f.number_field :user_id %></td>
+    </tr>
+    <tr>
       <td><%= f.submit ('submit') %></td>
     </tr>
   </table>
