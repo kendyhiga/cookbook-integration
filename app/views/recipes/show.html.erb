@@ -1,0 +1,48 @@
+<div class='row'>
+  <div class='col'>
+    <h1><%= @recipe['title'] %></h1>
+
+    <p><%= "Submitted by user_id: #{@recipe['user_id']}" %></p>
+
+    <h3><%= 'details' %></h3>
+    <table>
+      <tr>
+        <td><%= 'type_id' %>:</td>
+        <td><%= @recipe['recipe_type_id'] %></td>
+      </tr>
+      <tr>
+        <td><%= 'cuisine_id' %>:</td>
+        <td><%= @recipe['cuisine_id'] %></td>
+      </tr>
+      <tr>
+        <td><%= 'cook_time' %>:</td>
+        <td><%= @recipe['cook_time'] %></td>
+      </tr>
+      <tr>
+        <td><%= 'difficulty' %>:</td>
+        <td><%= @recipe['difficulty'] %></td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<div class='row'>
+  <div class='col'>
+    <table>
+      <tr>
+        <td><%= 'ingredients' %>:</td>
+        <td><%= @recipe['ingredients'] %></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class='col'>
+    <table>
+      <tr>
+        <td><%= 'cook_method' %>:</td>
+        <td><%= @recipe['cook_method'] %></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<%= link_to 'back', root_path %>
