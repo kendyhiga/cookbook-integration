@@ -19,7 +19,5 @@ class RecipesController < ApplicationController
       req.headers['Content-Type'] = 'application/json'
       req.body = {recipe: @recipe.instance_values }.to_json
     end
-
   end
-
 end
