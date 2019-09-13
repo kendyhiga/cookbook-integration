@@ -2,12 +2,14 @@ class Recipe
   extend ActiveModel::Naming
   include ActiveModel::Conversion
 
-  attr_accessor :title, :recipe_type_id, :cuisine_id, :difficulty,
-                :cook_time, :ingredients, :cook_method, :user_id
+  attr_reader :title, :recipe_type_id, :cuisine_id, :difficulty,
+              :cook_time, :ingredients, :cook_method, :user_id,
+              :status
 
-  def initialize(title = nil, recipe_type_id = nil, cuisine_id = nil,
-                 difficulty = nil, cook_time = nil, ingredients = nil,
-                 cook_method = nil, user_id = nil)
+  def initialize(title: nil, recipe_type_id: nil, cuisine_id: nil,
+                 difficulty: nil, cook_time: nil, ingredients: nil,
+                 cook_method: nil, user_id: nil, status: nil,
+                 created_at: nil, updated_at: nil, id: nil)
     @title = title
     @recipe_type_id = recipe_type_id
     @cuisine_id = cuisine_id

@@ -1,0 +1,15 @@
+<% @recipes.each do |recipe| %>
+  <div class='row'>
+    <div class='col-3'>
+      <p><%= link_to recipe.title, recipe, class: 'link' %></p>
+      <p><%= "type: #{recipe.recipe_type_id}" %></p>
+      <p><%= "cuisine: #{recipe.cuisine_id}" %></p>
+      <p><%= "difficulty: #{recipe.difficulty}" %></p>
+      <p><%= "cook_time: #{recipe.cook_time}" %></p>
+      <p><%= "ingredients: #{recipe.ingredients}" %></p>
+      <p><%= "cook_method: #{recipe.cook_method}" %></p>
+      <p><%= "user_id: #{recipe.difficulty}" %></p>
+    </div>
+  </div>
+  <br>
+<% end %>
